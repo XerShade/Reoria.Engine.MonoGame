@@ -9,5 +9,15 @@
     <Import_RootNamespace>Reoria.Engine.MonoGame</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Interfaces\IContentLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Interfaces\IContentUnloader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameCore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameDisposer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameDrawer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameFixedUpdater.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameInitializer .cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameUpdater.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\MonoGameClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\MonoGameServer.cs" />
   </ItemGroup>
 </Project>
