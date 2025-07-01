@@ -19,5 +19,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IMonoGameUpdater.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\MonoGameClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\MonoGameServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)World\Interfaces\IMonoGameWorldBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)World\MonoGameWorldBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)World\Registrars\MonoGameWorldRegistrar.cs" />
   </ItemGroup>
 </Project>
