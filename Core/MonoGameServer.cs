@@ -133,7 +133,9 @@ public class MonoGameServer : Disposable, IMonoGameCore
     {
         foreach (IMonoGameInitializer initializer in this.Initializers)
         {
-            initializer.Initialize(this);
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
+            initializer.Initialize(null, null);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
     }
 

@@ -69,7 +69,7 @@ public class MonoGameClient : MonoGameBase, IMonoGameCore
     /// SpriteBatch used for batching 2D rendering operations.
     /// Initialized during <see cref="Initialize"/>.
     /// </summary>
-    protected SpriteBatch? SpriteBatch;
+    public SpriteBatch? SpriteBatch { get; protected set; }
 
     /// <summary>
     /// Constructs a new instance of <see cref="MonoGameClient"/> with injected dependencies.
@@ -114,7 +114,7 @@ public class MonoGameClient : MonoGameBase, IMonoGameCore
 
         foreach (IMonoGameInitializer initializer in this.Initializers)
         {
-            initializer.Initialize(this);
+            initializer.Initialize(this.GraphicsDevice, this.SpriteBatch);
         }
 
         base.Initialize();

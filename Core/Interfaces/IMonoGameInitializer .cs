@@ -1,4 +1,6 @@
-﻿namespace Reoria.Engine.MonoGame.Core.Interfaces;
+﻿using Microsoft.Xna.Framework.Graphics;
+
+namespace Reoria.Engine.MonoGame.Core.Interfaces;
 
 /// <summary>
 /// Defines a contract for initializing MonoGame-related systems and services.
@@ -10,6 +12,7 @@ public interface IMonoGameInitializer
     /// Initializes the application with the provided MonoGame core instance.
     /// Use this method to register services, configure systems, and perform other startup tasks.
     /// </summary>
-    /// <param name="monoGameCore">The MonoGame core instance to initialize with.</param>
-    void Initialize(IMonoGameCore monoGameCore);
+    /// <param name="graphicsDevice">The <see cref="GraphicsDevice"/> instance on this MonoGame class.</param>
+    /// <param name="spriteBatch">The <see cref="SpriteBatch"/> instance on this MonoGame class.</param>
+    void Initialize(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch);
 }
