@@ -16,5 +16,16 @@ public class MonoGameWorldRegistrar : IServiceRegistrar
     /// </summary>
     /// <inheritdoc/>
     public void RegisterServices(ContainerBuilder builder, IConfiguration configuration, ILoggerFactory loggerFactory)
-        => builder.RegisterType<MonoGameWorldBuilder>().As<IMonoGameWorldBuilder>().InstancePerDependency();
+    {
+        // Register world builder with the container.
+        _ = builder.RegisterType<MonoGameWorldBuilder>()
+            .As<IMonoGameWorldBuilder>()
+            .InstancePerDependency();
+
+        // Register entity manager with the container.
+        _ = builder.RegisterType<MonoGameEntityManager>()
+            .As<IMonoGameEntityManager>()
+            .AsImplementedInterfaces()
+            .SingleInstance();
+    }
 }
